@@ -1,0 +1,26 @@
+{% extends 'commonIframe.twig' %}
+
+{% set title = {'logo': "emblem-companies",
+                'title': "File manager",
+                'help': "View and manage your files"} %}
+
+{% block content %}
+<div id="iframeMain">
+    <iframe frameborder=0 src="modules/Ajaxplorer/ajaxplorer/"></iframe>
+</div>
+<script>
+$(function(){
+    resizeIframe();
+});
+
+function resizeIframe() {
+    var height = $('body').height() - $('#iframeMain').get(0).offsetTop;
+    $('#iframeMain').css('height', height+'px');
+    $('#iframeMain').height(height);    
+}
+
+$(window).resize(function() {
+  resizeIframe();
+});
+</script>
+{% endblock %}

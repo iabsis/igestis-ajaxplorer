@@ -1,0 +1,5 @@
+classes         usr/share/igestis/modules/Ajaxplorer/
+config		    usr/share/igestis/modules/Ajaxplorer/
+controllers     usr/share/igestis/modules/Ajaxplorer/
+ajaxplorer		usr/share/igestis/modules/Ajaxplorer/
+templates       usr/share/igestis/modules/Ajaxplorer/

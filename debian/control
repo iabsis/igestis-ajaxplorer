@@ -1,0 +1,14 @@
+Source: igestis-ajaxplorer
+Section: web
+Priority: extra
+Maintainer: Olivier Bitsch <olivier.b@iabsis.com>
+Build-Depends: debhelper (>= 5), po-debconf
+Standards-Version: 3.7.2
+
+Package: igestis-ajaxplorer
+Architecture: all
+Depends: igestis (>= 2.3), smbclient
+Description: File Explorer for iGestis
+ This module also the users to browse their
+ personal and common folders. iGestis Ajaxplorer 
+ is based on Ajaxplorer software.
