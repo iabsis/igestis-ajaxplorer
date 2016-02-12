@@ -135,7 +135,6 @@ class AjaxplorerAuthentication {
 
 
         $AJXP_GLUE_GLOBALS["user"] ['email'] = $CoreContacts->getEmail();
-        \Igestis\Utils\Dump::show($CoreContacts->getCountryCode());
         if($CoreContacts->getCountryCode() == null) {
             $AJXP_GLUE_GLOBALS["user"] ['country'] = '';
         }
