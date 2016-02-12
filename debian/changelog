@@ -1,3 +1,9 @@
+igestis-ajaxplorer (3.0.1) UNRELEASED; urgency=medium
+
+  * Fix for igestis v3.
+
+ -- Olivier Bitsch <olivier.b@iabsis.com>  Fri, 12 Feb 2016 15:28:15 +0100
+
 igestis-ajaxplorer (2.0.0) wheezy; urgency=low
 
   * Initial release version 2.0.0.

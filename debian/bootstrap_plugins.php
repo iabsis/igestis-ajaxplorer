@@ -42,9 +42,9 @@ $PLUGINS = array(
 		"NAME"		=> "remote",
 		"OPTIONS"       => array(
 			"SLAVE_MODE"  => true,
-			"USERS_FILEPATH" => "AJXP_INSTALL_PATH/server/users/users.ser",
-			"LOGIN_URL" => \ConfigIgestisGlobalVars::SERVER_ADDRESS . "/index.php?Action=login&Force=1",
-			"LOGOUT_URL" => \ConfigIgestisGlobalVars::SERVER_ADDRESS . "/index.php?Action=login&Force=1",
+			"USERS_FILEPATH" => "AJXP_DATA_PATH/users.ser",
+			"LOGIN_URL" => \ConfigIgestisGlobalVars::serverAddress() . "/igestis/index.php?Action=login&Force=1",
+			"LOGOUT_URL" => \ConfigIgestisGlobalVars::serverAddress() . "/igestis/index.php?Action=login&Force=1",
 			"SECRET" => \Igestis\Modules\Ajaxplorer\ConfigModuleVars::glueCodeSecret,
 			"TRANSMIT_CLEAR_PASS"   => false )
 	),

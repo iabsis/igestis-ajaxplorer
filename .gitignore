@@ -1,0 +1,6 @@
+.remote-sync.json
+build-stamp
+configure-stamp
+debian/igestis-ajaxplorer.debhelper.log
+debian/igestis-ajaxplorer.substvars
+debian/igestis-ajaxplorer/

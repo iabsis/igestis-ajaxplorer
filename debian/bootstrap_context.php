@@ -28,12 +28,12 @@ if(function_exists("xdebug_disable")){
 	xdebug_disable();
 }
 if(!class_exists("ConfigIgestisGlobalVars")) {
-    require_once realpath(dirname(__FILE__)) . "/../../config/ConfigModuleVars.php";
-    require_once(__DIR__ . "/../../../../config/igestis/ConfigIgestisGlobalVars.php");
+    require_once realpath(dirname(__FILE__)) . "/../../../../../modules/Ajaxplorer/config/ConfigModuleVars.php";
+    require_once(__DIR__ . "/../../../../../config/igestis/ConfigIgestisGlobalVars.php");
 }
 
 $ajaxplorerCacheFolder =  \ConfigIgestisGlobalVars::cacheFolder() . "/ajaxplorer";
-$ajaxplorerDataFolder = \ConfigIgestisGlobalVars::dataFolder() . "/ajaxplorer";
+$ajaxplorerDataFolder = \ConfigIgestisGlobalVars::dataFolder() . "/ajaxplorer/data";
 
 if (!is_dir($ajaxplorerCacheFolder)) {
     try {
@@ -66,15 +66,11 @@ define("AJXP_VERSION_DATE", $vDate);
 
 define("AJXP_EXEC", true);
 
-
-define("AJXP_DATA_PATH", AJXP_INSTALL_PATH."/data");
-define("AJXP_CACHE_DIR", AJXP_DATA_PATH."/cache");
-define("AJXP_SHARED_CACHE_DIR", AJXP_INSTALL_PATH."/data/cache");
+define("AJXP_SHARED_CACHE_DIR", $ajaxplorerDataFolder."/cache");
 
 
 define("AJXP_PLUGINS_CACHE_FILE", AJXP_CACHE_DIR."/plugins_cache.ser");
 define("AJXP_PLUGINS_REQUIRES_FILE", AJXP_CACHE_DIR."/plugins_requires.ser");
-die(AJXP_PLUGINS_REQUIRES_FILE);
 define("AJXP_PLUGINS_MESSAGES_FILE", AJXP_CACHE_DIR."/plugins_messages.ser");
 define("AJXP_SERVER_ACCESS", "index.php");
 define("AJXP_PLUGINS_FOLDER", "plugins");
@@ -98,7 +94,7 @@ define("ADMIN_PASSWORD", "root");
 
 
 // DEBUG OPTIONS
-if(\ConfigIgestisGlobalVars::DEBUG_MODE) {
+if(\ConfigIgestisGlobalVars::debugMode()) {
     define("AJXP_CLIENT_DEBUG"  ,	true);
     define("AJXP_SERVER_DEBUG"  ,	true);
     define("AJXP_SKIP_CACHE"    ,       true);

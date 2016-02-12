@@ -30,7 +30,7 @@ configure-stamp:
 
 build: build-stamp
 
-build-stamp: configure-stamp 
+build-stamp: configure-stamp
 	dh_testdir
 
 	# Add here commands to compile the package.
@@ -45,12 +45,12 @@ clean:
 	rm -f build-stamp configure-stamp
 	rm -rf debian/igestis
 
-	dh_clean 
+	dh_clean
 
 install: build
 	dh_testdir
 	dh_testroot
-	dh_clean -k 
+	dh_clean -k
 	dh_installdirs
 	dh_installdebconf
 
@@ -62,12 +62,12 @@ binary-indep: build install
 binary-arch: build install
 	dh_testdir
 	dh_testroot
-	dh_installchangelogs 
+	dh_installchangelogs
 	dh_installdocs
 	dh_installexamples
 	dh_install
 #	dh_installmenu
-#	dh_installdebconf	
+#	dh_installdebconf
 #	dh_installlogrotate
 #	dh_installemacsen
 #	dh_installpam
@@ -79,12 +79,12 @@ binary-arch: build install
 	dh_installman
 	dh_link
 #	find debian/igestis -name *.svn | xargs -r rm -r
-	install -m 0755 debian/bootstrap_conf.php debian/igestis-ajaxplorer/usr/share/igestis/modules/Ajaxplorer/ajaxplorer/conf
-	install -m 0755 debian/bootstrap_context.php debian/igestis-ajaxplorer/usr/share/igestis/modules/Ajaxplorer/ajaxplorer/conf
-	install -m 0755 debian/bootstrap_plugins.php debian/igestis-ajaxplorer/usr/share/igestis/modules/Ajaxplorer/ajaxplorer/conf
-	install -m 0755 debian/bootstrap_repositories.php debian/igestis-ajaxplorer/usr/share/igestis/modules/Ajaxplorer/ajaxplorer/conf
-	install -m 0755 debian/plugins_configs.ser debian/igestis-ajaxplorer/usr/share/igestis/modules/Ajaxplorer/ajaxplorer/data/plugins/conf.serial
-	install -m 0755 debian/diag_result.php debian/igestis-ajaxplorer/usr/share/igestis/modules/Ajaxplorer/ajaxplorer/data/cache
+	install -m 0755 debian/bootstrap_conf.php debian/igestis-ajaxplorer/usr/share/igestis/public/modules/Ajaxplorer/ajaxplorer/conf
+	install -m 0755 debian/bootstrap_context.php debian/igestis-ajaxplorer/usr/share/igestis/public/modules/Ajaxplorer/ajaxplorer/conf
+	install -m 0755 debian/bootstrap_plugins.php debian/igestis-ajaxplorer/usr/share/igestis/public/modules/Ajaxplorer/ajaxplorer/conf
+	install -m 0755 debian/bootstrap_repositories.php debian/igestis-ajaxplorer/usr/share/igestis/public/modules/Ajaxplorer/ajaxplorer/conf
+	install -m 0755 debian/plugins_configs.ser debian/igestis-ajaxplorer/var/lib/igestis/ajaxplorer/data/plugins/conf.serial
+	install -m 0755 debian/diag_result.php debian/igestis-ajaxplorer/var/lib/igestis/ajaxplorer/data/cache
 	dh_strip
 	dh_compress
 	dh_fixperms

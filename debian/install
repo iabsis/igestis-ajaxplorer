@@ -1,5 +1,9 @@
-classes         usr/share/igestis/modules/Ajaxplorer/
-config		    usr/share/igestis/modules/Ajaxplorer/
-controllers     usr/share/igestis/modules/Ajaxplorer/
-ajaxplorer		usr/share/igestis/modules/Ajaxplorer/
-templates       usr/share/igestis/modules/Ajaxplorer/
+public/modules/Ajaxplorer/ajaxplorer/data/     var/lib/igestis/ajaxplorer
+
+public/modules/Ajaxplorer/ajaxplorer/conf/      usr/share/igestis/public/modules/Ajaxplorer/ajaxplorer
+public/modules/Ajaxplorer/ajaxplorer/core/      usr/share/igestis/public/modules/Ajaxplorer/ajaxplorer
+public/modules/Ajaxplorer/ajaxplorer/plugins/   usr/share/igestis/public/modules/Ajaxplorer/ajaxplorer
+public/modules/Ajaxplorer/ajaxplorer/*.php      usr/share/igestis/public/modules/Ajaxplorer/ajaxplorer
+public/modules/Ajaxplorer/ajaxplorer/.htaccess  usr/share/igestis/public/modules/Ajaxplorer/ajaxplorer
+
+modules		usr/share/igestis/
